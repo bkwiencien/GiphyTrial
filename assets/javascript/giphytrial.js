@@ -11,6 +11,7 @@ var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 }
 function searchFor() {
   console.log("in searchFor");
-  thingToLookFor = document.getElementById("forma").value;
+  //thingToLookFor = document.getElementById("forma").value;
+  thingToLookFor = $("#forma").val();
   console.log(thingToLookFor);
 }
