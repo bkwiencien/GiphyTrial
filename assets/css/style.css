@@ -3,7 +3,11 @@
 	color: red;
 }
 #textsection {
-	background-color: #aoaoao;
+	background-color: #7FFFD4;
+	color: black;
+}
+#buttonsection {
+	background-color: #7FFFD4;
 	color: black;
 }
 #line1 {
@@ -16,4 +20,7 @@
 }
 #forma {
 	color: black;
+}
+#displaysection {
+	background-color: #7FFFD4;
 }
