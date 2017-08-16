@@ -18,7 +18,8 @@ function searchFor() {
   var newButton = document.createElement("input");
   newButton.type = "button";
   newButton.value = thingToLookFor;
-  newButton.class = "button";
+  //newButton.class = "button";
+  newButton.setAttribute("class","button");
  //  newButton.setAttribute("onclick","clickHandler()"); this worked!!!
   newButton.setAttribute("onclick","clickHandler("+ "'" + thingToLookFor + "')");
 

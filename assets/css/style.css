@@ -1,23 +1,28 @@
-button {
-	border: none;
-	color:  red;
-	background-color: #008CBA;
-}
 .button {
 	border: none;
 	color:  red;
 	background-color: #008CBA;
 }
+button {
+	border: none;
+	color:  red;
+	background-color: #008CBA;
+}
+.buttona {
+	border: none;
+	color:  red;
+	background-color: #008CBA;
+}
 #main {
-	background-color: #7FFFD4!important;
+	background-color: #FFBD33!important;
 	color: red;
 }
 #textsection {
-	background-color: #7FFFD4;
+	background-color: #FFBD33;
 	color: black;
 }
 #buttonsection {
-	background-color: #7FFFD4;
+	background-color: #FFBD33;
 	color: black;
 }
 #line1 {
@@ -32,5 +37,5 @@ button {
 	color: black;
 }
 #displaysection {
-	background-color: #7FFFD4;
+	background-color: #FFBD33;
 }
