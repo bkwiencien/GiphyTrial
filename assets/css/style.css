@@ -5,7 +5,9 @@
 	background-color: #008CBA;
 }
 button {
-	border: none;
+	border-top:  30px;
+	border-width:  3px;
+	botrder-bottom: 30px;
 	color:  red;
 	background-color: #008CBA;stroke-linecap: 
 	padding: 10px;
