@@ -15,3 +15,7 @@ function searchFor() {
   thingToLookFor = $("#forma").val();
   console.log(thingToLookFor);
 }
+function clickHandler(param) {
+  console.log("in clickHandler");
+  console.log("param = " +param);
+}
