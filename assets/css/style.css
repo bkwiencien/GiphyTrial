@@ -1,3 +1,4 @@
+
 .button {
 	border: none;
 	color:  red;
@@ -6,7 +7,8 @@
 button {
 	border: none;
 	color:  red;
-	background-color: #008CBA;
+	background-color: #008CBA;stroke-linecap: 
+	padding: 10px;
 }
 .buttona {
 	border: none;

@@ -22,6 +22,7 @@ function searchFor() {
   newButton.setAttribute("class","button");
  //  newButton.setAttribute("onclick","clickHandler()"); this worked!!!
   newButton.setAttribute("onclick","clickHandler("+ "'" + thingToLookFor + "')");
+  buttonContainer.append(" ");
 
 
   buttonContainer.appendChild(newButton);
