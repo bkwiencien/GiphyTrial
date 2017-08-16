@@ -18,6 +18,12 @@ function searchFor() {
   var newButton = document.createElement("input");
   newButton.type = "button";
   newButton.value = thingToLookFor;
+  newButton.class = "button";
+ // newButton.click =  "clickHandler(" + thingToLookFor +"'')";                                 
+ //newButton.onclick = function(){alert('clicked');};  // This worked
+ newButton.addEventListener("click",clickHandler());
+
+
   buttonContainer.appendChild(newButton);
 }
 function clickHandler(param) {
