@@ -2,14 +2,13 @@
 .button {
 	border: none;
 	color:  red;
+	margin: 10px;
 	background-color: #008CBA;
 }
 button {
-	border-top:  30px;
-	border-width:  3px;
-	botrder-bottom: 30px;
+	margin: 5px;
 	color:  red;
-	background-color: #008CBA;stroke-linecap: 
+	background-color: #008CBA;
 	padding: 10px;
 }
 .buttona {
