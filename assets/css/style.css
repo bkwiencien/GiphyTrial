@@ -1,6 +1,7 @@
 button {
 	border: none;
 	color:  red;
+	background-color: #008CBA;
 }
 #main {
 	background-color: #7FFFD4!important;

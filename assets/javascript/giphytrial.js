@@ -14,6 +14,11 @@ function searchFor() {
   //thingToLookFor = document.getElementById("forma").value;
   thingToLookFor = $("#forma").val();
   console.log(thingToLookFor);
+  var buttonContainer = document.getElementById("buttonsection");
+  var newButton = document.createElement("input");
+  newButton.type = "button";
+  newButton.value = thingToLookFor;
+  buttonContainer.appendChild(newButton);
 }
 function clickHandler(param) {
   console.log("in clickHandler");
