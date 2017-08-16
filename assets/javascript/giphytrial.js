@@ -19,9 +19,7 @@ function searchFor() {
   newButton.type = "button";
   newButton.value = thingToLookFor;
   newButton.class = "button";
- // newButton.click =  "clickHandler(" + thingToLookFor +"'')";                                 
- //newButton.onclick = function(){alert('clicked');};  // This worked
- newButton.addEventListener("click",clickHandler());
+  newButton.setAttribute("onclick","clickHandler()");
 
 
   buttonContainer.appendChild(newButton);
