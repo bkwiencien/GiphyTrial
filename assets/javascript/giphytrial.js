@@ -25,13 +25,11 @@ function clickHandler(param) {
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-   //    console.log(response);
        removeImages();
        console.log(response);
       for (i=0;i<response.data.length;i++) {
         var pic = document.createElement("img");
-        var picUrl = response.data[i].images.original_still.url;
-        //picUrl.setAttribute("alternatieve,"rasponse.data[i].images.downsized");                                                            
+        var picUrl = response.data[i].images.original_still.url;                                                         
         pic.src=picUrl;
         $("#displaysection").append(pic);       
       }
