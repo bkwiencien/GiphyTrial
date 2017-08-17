@@ -3,12 +3,12 @@
 	border: none;
 	color:  red;
 	margin: 10px;
-	background-color: #008CBA;
+	background-color: green;
 }
 button {
 	margin: 5px;
 	color:  red;
-	background-color: #008CBA;
+	background-color: green;
 	padding: 10px;
 }
 .buttona {
@@ -17,15 +17,15 @@ button {
 	background-color: #008CBA;
 }
 #main {
-	background-color: #FFBD33!important;
+	background-color: #808080!important;
 	color: red;
 }
 #textsection {
-	background-color: #FFBD33;
+	background-color: #808080;
 	color: black;
 }
 #buttonsection {
-	background-color: #FFBD33;
+	background-color: #808080;
 	color: black;
 }
 #line1 {

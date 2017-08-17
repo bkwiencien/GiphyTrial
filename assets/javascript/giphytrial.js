@@ -1,4 +1,5 @@
 var thingToLookFor = "";
+var topics = ["homer simpson","Ren and Stimpy","the family guy","duckman","futurama"];
 function getStuff() {
 var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 
@@ -21,6 +22,8 @@ function searchFor() {
   newButton.setAttribute("class","button");
   newButton.setAttribute("onclick","clickHandler("+ "'" + thingToLookFor + "')");
   buttonContainer.append(" ");
+  topics.push(thingToLookFor);
+  console.log(topics);
 
 
   buttonContainer.appendChild(newButton);
