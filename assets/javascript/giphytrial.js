@@ -32,3 +32,15 @@ function clickHandler(param) {
   console.log("in clickHandler");
   console.log("param = " +param);
 }
+function initialize() {
+  for (j=0;j<topics.length;j++) {
+     var buttonContainer = document.getElementById("buttonsection");
+     var newButton = document.createElement("input");
+     newButton.type = "button";
+     newButton.value = topics[j];
+     newButton.setAttribute("class","button");
+     newButton.setAttribute("onclick","clickHandler("+ "'" + topics[j] + "')");
+     buttonContainer.append(" ");  
+     buttonContainer.appendChild(newButton);
+  }
+}
