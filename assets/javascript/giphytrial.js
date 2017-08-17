@@ -1,8 +1,8 @@
 var thingToLookFor = "";
 var topics = ["homer simpson","Ren and Stimpy","the family guy","duckman","futurama"];
 function getStuff() {
+//var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
-
     $.ajax({
       url: queryURL,
       method: 'GET'
@@ -24,8 +24,18 @@ function searchFor() {
   buttonContainer.appendChild(newButton);
 }
 function clickHandler(param) {
+  var headOfUrl = "http://api.giphy.com/v1/gifs/search?q=";
+ // var queryURL  = headOfUrl + param + "?api_key=dc6zaTOxFJmzC";
+  var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
   console.log("in clickHandler");
   console.log("param = " +param);
+  console.log(queryURL);
+  $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+      console.log(response);
+    });
 }
 function initialize() {
   for (j=0;j<topics.length;j++) {
