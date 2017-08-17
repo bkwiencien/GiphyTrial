@@ -3,7 +3,6 @@ var thingToLookFor = "";
 var topics = ["homer","batman","simpsons","duckman","futurama"];
 function searchFor() {
   thingToLookFor = $("#forma").val();
-  console.log(thingToLookFor);
   var buttonContainer = document.getElementById("buttonsection");
   var newButton = document.createElement("input");
   newButton.type = "button";
@@ -22,15 +21,24 @@ function clickHandler(param) {
   var stringToUse = removeSpaces(param);
   var queryURL = headOfUrl + stringToUse + tailOfUrl;
   console.log("in clickHandler");
-  console.log("param = " +param);
   console.log(stringToUse);
   console.log(queryURL);
   $.ajax({
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-      //console.log(response);
-      console.log(response.data[0].url);
+      // console.log(response);
+      for (i=0;i<response.data.length;i++) {
+       // console.log(response.data[i].url);
+        var pic = document.createElement("img");
+        console.log(response.data[i].images.original.url);
+        var picUrl = response.data[i].images.original.url;
+        console.log(picUrl);
+        pic.src=picUrl;
+       // var ele = document.getElementById("#displaysection");
+        $("#displaysection").append(pic);
+        //console.log("i have displayed it");          
+      }
     });
 }
 function initialize() {
