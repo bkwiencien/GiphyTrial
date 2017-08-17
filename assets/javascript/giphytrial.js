@@ -11,8 +11,6 @@ var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
     });
 }
 function searchFor() {
-  console.log("in searchFor");
-  //thingToLookFor = document.getElementById("forma").value;
   thingToLookFor = $("#forma").val();
   console.log(thingToLookFor);
   var buttonContainer = document.getElementById("buttonsection");
@@ -23,9 +21,6 @@ function searchFor() {
   newButton.setAttribute("onclick","clickHandler("+ "'" + thingToLookFor + "')");
   buttonContainer.append(" ");
   topics.push(thingToLookFor);
-  console.log(topics);
-
-
   buttonContainer.appendChild(newButton);
 }
 function clickHandler(param) {
