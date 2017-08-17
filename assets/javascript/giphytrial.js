@@ -27,10 +27,11 @@ function clickHandler(param) {
     }).done(function(response) {
    //    console.log(response);
        removeImages();
+       console.log(response);
       for (i=0;i<response.data.length;i++) {
         var pic = document.createElement("img");
-        //console.log(response.data[i].images.original.url);
         var picUrl = response.data[i].images.original_still.url;
+        //picUrl.setAttribute("alternatieve,"rasponse.data[i].images.downsized");                                                            
         pic.src=picUrl;
         $("#displaysection").append(pic);       
       }
