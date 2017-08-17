@@ -1,15 +1,6 @@
+
 var thingToLookFor = "";
 var topics = ["homer","batman","simpsons","duckman","futurama"];
-function getStuff() {
-//var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
-var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
-    $.ajax({
-      url: queryURL,
-      method: 'GET'
-    }).done(function(response) {
-      console.log(response);
-    });
-}
 function searchFor() {
   thingToLookFor = $("#forma").val();
   console.log(thingToLookFor);
@@ -38,7 +29,8 @@ function clickHandler(param) {
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-      console.log(response);
+      //console.log(response);
+      console.log(response.data[0].url);
     });
 }
 function initialize() {
