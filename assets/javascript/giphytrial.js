@@ -1,7 +1,7 @@
 
 var thingToLookFor = "";
 var response;
-var topics = ["homer","batman","simpsons","duckman","futurama"];
+var topics = ["homer","batman","simpsons","super man","futurama"];
 var nonMovingImages = [];
 var movingImages = [];
 function searchFor() {
