@@ -27,17 +27,14 @@ function clickHandler(param) {
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-      // console.log(response);
+       console.log(response);
+       removeImages();
       for (i=0;i<response.data.length;i++) {
-       // console.log(response.data[i].url);
         var pic = document.createElement("img");
         console.log(response.data[i].images.original.url);
-        var picUrl = response.data[i].images.original.url;
-        console.log(picUrl);
+        var picUrl = response.data[i].images.original_still.url;
         pic.src=picUrl;
-       // var ele = document.getElementById("#displaysection");
-        $("#displaysection").append(pic);
-        //console.log("i have displayed it");          
+        $("#displaysection").append(pic);       
       }
     });
 }
@@ -57,4 +54,7 @@ function removeSpaces(stringin){
   var stringToReturn =  stringin.trim();
   stringToReturn = stringToReturn.replace(/\s/g, '+');
   return(stringToReturn);
+}
+function removeImages() {
+
 }
