@@ -2,6 +2,8 @@
 var thingToLookFor = "";
 var response;
 var topics = ["homer","batman","simpsons","duckman","futurama"];
+var nonMovingImages = [];
+var movingImages = [];
 function searchFor() {
   thingToLookFor = $("#forma").val();
   var buttonContainer = document.getElementById("buttonsection");
@@ -29,7 +31,10 @@ function clickHandler(param) {
        console.log(response);
       for (i=0;i<response.data.length;i++) {
         var pic = document.createElement("img");
-        var picUrl = response.data[i].images.original_still.url;                                                         
+        var picUrl = response.data[i].images.original_still.url;  
+        nonMovingImages.push(picUrl);
+        movingImages.push(response.data[i].images.original_still.url);  
+        nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
         pic.src=picUrl;
         $("#displaysection").append(pic);       
       }
