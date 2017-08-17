@@ -25,8 +25,9 @@ function searchFor() {
 }
 function clickHandler(param) {
   var headOfUrl = "http://api.giphy.com/v1/gifs/search?q=";
-  var tailOfUrl = "&api_key=dc6zaTOxFJmzC&limit=5";
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=10";
+  var tailOfUrl = "&api_key=dc6zaTOxFJmzC&limit=10";
+ // var queryURL = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = headOfUrl + param + tailOfUrl;
   console.log("in clickHandler");
   console.log("param = " +param);
   console.log(queryURL);
