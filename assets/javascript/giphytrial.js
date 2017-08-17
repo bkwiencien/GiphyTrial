@@ -1,5 +1,6 @@
 
 var thingToLookFor = "";
+var response;
 var topics = ["homer","batman","simpsons","duckman","futurama"];
 function searchFor() {
   thingToLookFor = $("#forma").val();
@@ -20,18 +21,15 @@ function clickHandler(param) {
   var tailOfUrl = "&api_key=dc6zaTOxFJmzC&limit=10";
   var stringToUse = removeSpaces(param);
   var queryURL = headOfUrl + stringToUse + tailOfUrl;
-  console.log("in clickHandler");
-  console.log(stringToUse);
-  console.log(queryURL);
   $.ajax({
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-       console.log(response);
+   //    console.log(response);
        removeImages();
       for (i=0;i<response.data.length;i++) {
         var pic = document.createElement("img");
-        console.log(response.data[i].images.original.url);
+        //console.log(response.data[i].images.original.url);
         var picUrl = response.data[i].images.original_still.url;
         pic.src=picUrl;
         $("#displaysection").append(pic);       
@@ -56,5 +54,5 @@ function removeSpaces(stringin){
   return(stringToReturn);
 }
 function removeImages() {
-
+  $("#displaysection").empty();
 }
