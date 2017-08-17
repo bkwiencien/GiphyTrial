@@ -26,10 +26,11 @@ function searchFor() {
 function clickHandler(param) {
   var headOfUrl = "http://api.giphy.com/v1/gifs/search?q=";
   var tailOfUrl = "&api_key=dc6zaTOxFJmzC&limit=10";
- // var queryURL = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=10";
-  var queryURL = headOfUrl + param + tailOfUrl;
+  var stringToUse = removeSpaces(param);
+  var queryURL = headOfUrl + stringToUse + tailOfUrl;
   console.log("in clickHandler");
   console.log("param = " +param);
+  console.log(stringToUse);
   console.log(queryURL);
   $.ajax({
       url: queryURL,
@@ -49,4 +50,9 @@ function initialize() {
      buttonContainer.append(" ");  
      buttonContainer.appendChild(newButton);
   }
+}
+function removeSpaces(stringin){
+  var stringToReturn =  stringin.trim();
+  stringToReturn = stringToReturn.replace(/\s/g, '+');
+  return(stringToReturn);
 }
