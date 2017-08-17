@@ -1,5 +1,5 @@
 var thingToLookFor = "";
-var topics = ["homer simpson","Ren and Stimpy","the family guy","duckman","futurama"];
+var topics = ["homer","batman","simpsons","duckman","futurama"];
 function getStuff() {
 //var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
@@ -26,7 +26,7 @@ function searchFor() {
 function clickHandler(param) {
   var headOfUrl = "http://api.giphy.com/v1/gifs/search?q=";
   var tailOfUrl = "&api_key=dc6zaTOxFJmzC&limit=5";
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5";
+  var queryURL = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=10";
   console.log("in clickHandler");
   console.log("param = " +param);
   console.log(queryURL);
