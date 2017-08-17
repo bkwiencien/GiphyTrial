@@ -21,7 +21,9 @@ function searchFor() {
   newButton.setAttribute("onclick","clickHandler("+ "'" + thingToLookFor + "')");
   buttonContainer.append(" ");
   topics.push(thingToLookFor);
-  buttonContainer.appendChild(newButton);
+  if (thingToLookFor.length > 0) {
+     buttonContainer.appendChild(newButton);
+  }   
 }
 function clickHandler(param) {
   var headOfUrl = "http://api.giphy.com/v1/gifs/search?q=";
