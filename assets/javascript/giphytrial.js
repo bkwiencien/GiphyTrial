@@ -99,14 +99,14 @@ function clickHandler(param) {
       method: 'GET'
     }).done(function(response) {
        removeImages();
-       console.log(response);
       for (i=0;i<response.data.length;i++) {
         var w = arrayOfGifs[i];
         var pic = document.createElement("img");
         pic.setAttribute("id","gif"+i);
         var picUrl = response.data[i].images.original_still.url;  
         w.staticGif = response.data[i].images.original_still.url;
-        w.activeGif = response.data[i].images.downsized;
+        w.activeGif = response.data[i].images.downsized.url;
+        console.log("setup " + w.activeGif);
         pic.src=picUrl;
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
@@ -138,7 +138,7 @@ function removeImages() {
 function changeImage(calledBy) {
   var index = 0;
   console.log("in changeImage");
-  console.log(calledBy);
+  var idstring = "#"+calledBy;
   if (calledBy == "gif0") index = 0;
   if (calledBy == "gif1") index = 1;
   if (calledBy == "gif2") index = 2;
@@ -150,5 +150,18 @@ function changeImage(calledBy) {
   if (calledBy == "gif8") index = 8;
   if (calledBy == "gif9") index = 9;
   var w = arrayOfGifs[index];
-  console.log("index = " + index);
+  if (w.state == "s") {
+    w.state = "a";
+    console.log($("#"+calledBy));
+    console.log("active gif = " + w.activeGif);
+    // this is what I need https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37
+   // $("#"+calledBy).attr("src","https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37");
+    $("#"+calledBy).attr("src",w.activeGif);
+  }  
+  if (w.state == "a") {
+     w.state = "s";
+     $("#"+calledBy);
+    //$("#"+calledBy).setAttribute("src",w.staticGif);
+
+  }
 }
