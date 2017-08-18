@@ -91,11 +91,14 @@ function clickHandler(param) {
        removeImages();
        console.log(response);
       for (i=0;i<response.data.length;i++) {
+        var w = arrayOfGifs[i];
         var pic = document.createElement("img");
         var picUrl = response.data[i].images.original_still.url;  
-        nonMovingImages.push(picUrl);
-        movingImages.push(response.data[i].images.original_still.url);  
-        nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
+        w.staticGif = response.data[i].images.original_still.url;
+        // add active gif here
+       // nonMovingImages.push(picUrl);
+       // movingImages.push(response.data[i].images.original_still.url);  
+       // nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
         pic.src=picUrl;
         pic.setAttribute("value","0");
         $("#displaysection").append(pic);       
