@@ -41,7 +41,7 @@ button {
 }
 #displaysection {
 	height: 900px;
-	width:  1200px;
+	width:  2000px;
 	background-color: #808080;
 }
 h1 {
@@ -51,4 +51,9 @@ h1 {
 img {
 	 height: 250px;
 	 width: 250px;
+	 margin: 20px;
+}
+#rating {
+	text-align:  top;
+	font-size:   5px;
 }
