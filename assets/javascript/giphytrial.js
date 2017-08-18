@@ -111,7 +111,7 @@ function clickHandler(param) {
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
        // $("#displaysection").append("<p class='rating'>" + w.rating + "</p>");
-        $("#displaysection").append(pic);  
+        $("#displaysection").append(pic);
       }
     });
 }
