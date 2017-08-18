@@ -149,5 +149,6 @@ function changeImage(calledBy) {
   if (calledBy == "gif7") index = 7;
   if (calledBy == "gif8") index = 8;
   if (calledBy == "gif9") index = 9;
+  var w = arrayOfGifs[index];
   console.log("index = " + index);
 }
