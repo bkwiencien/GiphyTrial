@@ -135,7 +135,6 @@ function removeImages() {
 }
 function changeImage(calledBy) {
   var index = 0;
-  console.log("in changeImage");
   var idstring = "#"+calledBy;
   if (calledBy == "gif0") index = 0;
   if (calledBy == "gif1") index = 1;
@@ -150,17 +149,10 @@ function changeImage(calledBy) {
   var w = arrayOfGifs[index];
   if (w.state == "s") {
     w.state = "a";
-    console.log($("#"+calledBy));
-    console.log("active gif = " + w.activeGif);
-    // this is what I need https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37
-   // $("#"+calledBy).attr("src","https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37");
     $("#"+calledBy).attr("src",w.activeGif);
   } else   {
   if (w.state == "a") 
-     console.log("state = " + w.state);
-    // $("#"+calledBy).attr("src",w.static
      w.state = "s";
-     console.log("state after = " + w.state);
     $("#"+calledBy).attr("src",w.staticGif);
 
   }
