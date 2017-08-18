@@ -4,6 +4,12 @@ var response;
 var topics = ["homer","batman","simpsons","super man","futurama"];
 var nonMovingImages = [];
 var movingImages = [];
+var gif = {
+     id:  "gif0",
+     state:  "s",
+     staticGif:  "",
+     activeGif:  ""
+};
 function searchFor() {
   thingToLookFor = $("#forma").val();
   var buttonContainer = document.getElementById("buttonsection");
