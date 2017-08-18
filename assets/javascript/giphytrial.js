@@ -7,60 +7,70 @@ var movingImages = [];
 var gif0 = {
      id:  "gif0",
      state:  "s",
+     rating:  "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif1 = {
      id:  "gif1",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif2 = {
      id:  "gif2",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif3 = {
      id:  "gif3",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif4 = {
      id:  "gif4",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif5 = {
      id:  "gif5",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif6 = {
      id:  "gif6",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif7 = {
      id:  "gif7",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif8 = {
      id:  "gif8",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
 var gif9 = {
      id:  "gif9",
      state:  "s",
+     rating: "",
      staticGif:  "",
      activeGif:  ""
 };
@@ -93,9 +103,10 @@ function clickHandler(param) {
       for (i=0;i<response.data.length;i++) {
         var w = arrayOfGifs[i];
         var pic = document.createElement("img");
+        pic.setAttribute("id","gif"+i);
         var picUrl = response.data[i].images.original_still.url;  
         w.staticGif = response.data[i].images.original_still.url;
-        // add active gif here
+        w.activeGif = response.data[i].images.downsized;
        // nonMovingImages.push(picUrl);
        // movingImages.push(response.data[i].images.original_still.url);  
        // nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
