@@ -106,10 +106,13 @@ function clickHandler(param) {
         var picUrl = response.data[i].images.original_still.url;  
         w.staticGif = response.data[i].images.original_still.url;
         w.activeGif = response.data[i].images.downsized.url;
+        w.rating    = response.data[i].rating;
+        console.log("rating = " + w.rating);
         pic.src=picUrl;
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
-        $("#displaysection").append(pic);       
+        $("#displaysection").append(pic);  
+      //  $("#displaysection").append("<br><br><br>rating is "+w.rating);
       }
     });
 }
