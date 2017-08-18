@@ -40,7 +40,8 @@ button {
 	color: black;
 }
 #displaysection {
-	height: 600px;
+	height: 900px;
+	width:  1200px;
 	background-color: #808080;
 }
 h1 {

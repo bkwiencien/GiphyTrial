@@ -111,6 +111,7 @@ function clickHandler(param) {
         pic.src=picUrl;
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
+        $("#displaysection").append("rating " +w.rating);
         $("#displaysection").append(pic);  
       //  $("#displaysection").append("<br><br><br>rating is "+w.rating);
       }
