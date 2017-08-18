@@ -136,7 +136,18 @@ function removeImages() {
   $("#displaysection").empty();
 }
 function changeImage(calledBy) {
+  var index = 0;
   console.log("in changeImage");
- console.log(calledBy);
-
+  console.log(calledBy);
+  if (calledBy == "gif0") index = 0;
+  if (calledBy == "gif1") index = 1;
+  if (calledBy == "gif2") index = 2;
+  if (calledBy == "gif3") index = 3;
+  if (calledBy == "gif4") index = 4;
+  if (calledBy == "gif5") index = 5;
+  if (calledBy == "gif6") index = 6;
+  if (calledBy == "gif7") index = 7;
+  if (calledBy == "gif8") index = 8;
+  if (calledBy == "gif9") index = 9;
+  console.log("index = " + index);
 }
