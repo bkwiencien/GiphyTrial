@@ -36,6 +36,7 @@ function clickHandler(param) {
         movingImages.push(response.data[i].images.original_still.url);  
         nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
         pic.src=picUrl;
+        pic.setAttribute("value","0");
         $("#displaysection").append(pic);       
       }
     });
@@ -59,4 +60,7 @@ function removeSpaces(stringin){
 }
 function removeImages() {
   $("#displaysection").empty();
+}
+function changeImage() {
+
 }
