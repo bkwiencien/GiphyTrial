@@ -106,11 +106,9 @@ function clickHandler(param) {
         var picUrl = response.data[i].images.original_still.url;  
         w.staticGif = response.data[i].images.original_still.url;
         w.activeGif = response.data[i].images.downsized.url;
-        console.log("setup " + w.activeGif);
         pic.src=picUrl;
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
-       // pic.setAttribute("onclick","changeImage()");
         $("#displaysection").append(pic);       
       }
     });
@@ -157,11 +155,13 @@ function changeImage(calledBy) {
     // this is what I need https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37
    // $("#"+calledBy).attr("src","https://media3.giphy.com/media/3o8doT9BL7dgtolp7O/giphy-downsized.gif?fingerprint=e1bb72ff5996ad87627a31627715fa37");
     $("#"+calledBy).attr("src",w.activeGif);
-  }  
-  if (w.state == "a") {
+  } else   {
+  if (w.state == "a") 
+     console.log("state = " + w.state);
+    // $("#"+calledBy).attr("src",w.static
      w.state = "s";
-     $("#"+calledBy);
-    //$("#"+calledBy).setAttribute("src",w.staticGif);
+     console.log("state after = " + w.state);
+    $("#"+calledBy).attr("src",w.staticGif);
 
   }
 }
