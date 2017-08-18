@@ -107,11 +107,10 @@ function clickHandler(param) {
         var picUrl = response.data[i].images.original_still.url;  
         w.staticGif = response.data[i].images.original_still.url;
         w.activeGif = response.data[i].images.downsized;
-       // nonMovingImages.push(picUrl);
-       // movingImages.push(response.data[i].images.original_still.url);  
-       // nonMovingImages.push(response.data[i].images.downsized)                                                       ;;
         pic.src=picUrl;
-        pic.setAttribute("value","0");
+        pic.setAttribute("value","i");
+        pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
+       // pic.setAttribute("onclick","changeImage()");
         $("#displaysection").append(pic);       
       }
     });
@@ -136,6 +135,8 @@ function removeSpaces(stringin){
 function removeImages() {
   $("#displaysection").empty();
 }
-function changeImage() {
+function changeImage(calledBy) {
+  console.log("in changeImage");
+ console.log(calledBy);
 
 }
