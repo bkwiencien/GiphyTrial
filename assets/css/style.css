@@ -40,9 +40,7 @@ button {
 	color: black;
 }
 #displaysection {
-	height: 900px;
-	width:  2000px;
-	background-color: #808080;
+	
 }
 h1 {
 	color: black;
@@ -55,5 +53,5 @@ img {
 }
 #rating {
 	text-align:  justify;
-	font-size:   5px;
+	font-size:   4px;
 }

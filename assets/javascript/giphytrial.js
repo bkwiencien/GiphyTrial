@@ -110,7 +110,9 @@ function clickHandler(param) {
         pic.src=picUrl;
         pic.setAttribute("value","i");
         pic.setAttribute("onclick","changeImage(" + "'" + w.id + "')");
-       // $("#displaysection").append("<p class='rating'>" + w.rating + "</p>");
+       $("#displaysection").append("<p class='rating'>" + "Rating: " + w.rating + "</p>");
+        //var pp = $("<p>").text("rating: " + w.rating);
+       // $("displaysection").append(pp);
         $("#displaysection").append(pic);
       }
     });
